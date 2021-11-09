@@ -33,18 +33,18 @@ const personalMovieDB = {
             alert('Произошла ошибка')
         }
     },
-//   writeYourGenres: function () {
-//        for (let i = 1; i < 2; i++) {
-//           let cha = prompt("Введите ваш любимы жанр по номерам через,","")
-//            let genres = cha.split(", ")
-//            personalMovieDB.genres = genres;
- //       }
- //       console.log(personalMovieDB.genres);
- //       personalMovieDB.genres.forEach(function (key, i) {
- //       console.log(`Любимый жанр ${i + 1} значения ${key}`)
- //       })
- //   },
-    writeYourGenres: function() {
+    writeYourGenres: function () {
+        for (let i = 1; i < 2; i++) {
+            let gen = prompt("Введите через запятую",'' ).toLocaleLowerCase();
+           let genres = gen.split(", ")
+            personalMovieDB.genres = genres;
+            personalMovieDB.genres.sort();
+        }
+        personalMovieDB.genres.forEach(function (key, i) {
+            console.log(`Любимый жанр ${i + 1} значения ${key}`)
+        })
+    },
+    RememberMyFilms: function () {
         for (let i = 0; i < 1; i++) {
             let a = prompt("Один из последних фильмов?", ""),
                 b = prompt("На сколько оцените его?", "");
@@ -55,14 +55,5 @@ const personalMovieDB = {
             }
         }
     }
-}
-function writeYourGenres (){
-    for (let i = 1; i < 2; i++) {
-        let cha = prompt("Введите ваш любимы жанр по номерам через, ","").toLocaleLowerCase()
-        let genres = cha.split(", ")
-          personalMovieDB.genres = genres;
-        personalMovieDB.genres.sort();
-    }
-      console.log(personalMovieDB.genres);
-}
-writeYourGenres();
+};
+
