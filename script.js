@@ -6,6 +6,7 @@ const personalMovieDB = {
     genres: [],
     privat: false,
 }
+
 ShowMyDB(personalMovieDB.privat);
 Start();
 writeYourGenres();
@@ -45,7 +46,7 @@ function PersonalLevel() {
     }
 }
 function RememberMyFilms() {
-   // for (let i = 0; i < 1; i++) {
+    for (let i = 0; i < 1; i++) {
             let a = prompt("Один из последних фильмов?", ""),
                 b = prompt("На сколько оцените его?", "");
         if (a != null && b != null && a != '' && b != '' && a.length < 50 && b.length < 50 ) {
@@ -54,7 +55,7 @@ function RememberMyFilms() {
         else {
             i--;
         }
- //   }
+    }
 }
 
-//console.log(personalMovieDB);
+console.log(personalMovieDB);
